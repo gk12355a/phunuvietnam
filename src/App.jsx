@@ -199,7 +199,7 @@ export default function App() {
           onClick={triggerCelebration}
           className="flex items-center gap-1.5 sm:gap-2 bg-[#2d0f18]/85 text-rose-200 text-[10px] sm:text-xs px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full border border-rose-500/40 backdrop-blur-md shadow-sm transition-all hover:scale-105 cursor-pointer"
         >
-          <Sparkles className="w-3.5 h-3.5 text-amber-400 animate-spin" style={{ animationDuration: '8s' }} />
+          <span className="text-base sm:text-lg animate-spin" style={{ animationDuration: '12s' }}>🌻</span>
           <span className="font-mono font-medium tracking-wide">
             {currentStep < 4 ? `HÀNH TRÌNH 20.10 • BƯỚC ${currentStep + 1}/5` : `TRANG THIỆP CHÍNH THỨC ♌`}
           </span>

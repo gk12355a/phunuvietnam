@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+  
+  .font-serif-art {
+    font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+  }
+
+  .font-cormorant {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+
+  .font-handwriting {
+    font-family: 'Caveat', cursive;
+  }
+}
+
+/* Nền kết hợp Hồng Ruby/Rose Velvet & Hoàng gia Gold */
+.rose-leo-bg {
+  background-color: #2b1219;
+  background-image: 
+    radial-gradient(circle at 50% 25%, rgba(244, 63, 94, 0.22) 0%, transparent 60%),
+    radial-gradient(circle at 85% 75%, rgba(245, 158, 11, 0.18) 0%, transparent 50%),
+    linear-gradient(135deg, #1f0b12 0%, #2f101b 50%, #1a0810 100%);
+}
+
+/* Giấy mỹ thuật ánh hồng phấn ngọc trai */
+.paper-texture-rose {
+  background-color: #fff8f9;
+  background-image: 
+    radial-gradient(#fecdd3 0.8px, transparent 0.8px),
+    radial-gradient(#fde68a 0.8px, #fff8f9 0.8px);
+  background-size: 28px 28px;
+  background-position: 0 0, 14px 14px;
+}
+
+/* Ánh nắng di chuyển nhẹ */
+.sunlight-leo {
+  background: linear-gradient(130deg, rgba(254, 205, 211, 0.25) 0%, rgba(253, 230, 138, 0.16) 40%, transparent 70%);
+  animation: sunlightShift 12s ease-in-out infinite alternate;
+}
+
+@keyframes sunlightShift {
+  0% { transform: scale(1) translate(0, 0); opacity: 0.8; }
+  100% { transform: scale(1.08) translate(15px, 10px); opacity: 1; }
+}
+
+/* Bóng đổ mềm kiêu sa hoàng gia */
+.leo-card-shadow {
+  box-shadow: 
+    0 25px 50px -12px rgba(35, 8, 18, 0.6),
+    0 8px 25px -4px rgba(217, 119, 6, 0.25),
+    0 0 0 1px rgba(254, 205, 211, 0.4) inset;
+}
+
+/* Cánh hoa hồng bay lơ lửng ngẫu nhiên */
+@keyframes petalDrift {
+  0% {
+    transform: translateY(-20px) translateX(0) rotate(0deg) scale(0.8);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.85;
+  }
+  90% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(105vh) translateX(120px) rotate(420deg) scale(1.1);
+    opacity: 0;
+  }
+}
+
+.animate-falling-petal {
+  animation: petalDrift 10s linear infinite;
+}
+
+/* Đom đóm ánh sáng vàng kim lung linh */
+@keyframes fireflyFloat {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.2;
+  }
+  50% {
+    transform: translate(30px, -40px) scale(1.5);
+    opacity: 0.85;
+    filter: drop-shadow(0 0 8px #f59e0b);
+  }
+}
+
+.animate-firefly {
+  animation: fireflyFloat 6s ease-in-out infinite alternate;
+}
+
+/* Hiệu ứng nhấp nháy phát sáng Vergil Approved */
+@keyframes vergilAura {
+  0%, 100% {
+    box-shadow: 0 10px 25px -5px rgba(244, 63, 94, 0.4), 0 0 15px rgba(245, 158, 11, 0.3);
+  }
+  50% {
+    box-shadow: 0 15px 35px -5px rgba(244, 63, 94, 0.7), 0 0 25px rgba(245, 158, 11, 0.6);
+  }
+}
+
+.animate-vergil-aura {
+  animation: vergilAura 3s ease-in-out infinite;
+}
